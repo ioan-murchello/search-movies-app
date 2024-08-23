@@ -1,19 +1,12 @@
 import { useState } from 'react';
 
 const Star = ({ onRate, full, onHoverIn, onHoverOut }) => {
-  
-  const starStyle = {
-    width: '25px',
-    height: '25px',
-    display: 'block',
-    cursor: 'pointer',
-  };
-
+ 
   return (
     <div onClick={onRate} onMouseEnter={onHoverIn} onMouseLeave={onHoverOut}>
       {full ? (
         <svg
-          style={starStyle}
+        className='star-styles' 
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 20 20'
           fill='#fccf0a'
@@ -23,7 +16,7 @@ const Star = ({ onRate, full, onHoverIn, onHoverOut }) => {
         </svg>
       ) : (
         <svg
-          style={starStyle}
+          className='star-styles' 
           xmlns='http://www.w3.org/2000/svg'
           fill='none'
           viewBox='0 0 24 24'
@@ -54,6 +47,8 @@ const StarRating = ({ max = 10, setUserRating }) => {
     display: 'flex',
     alignItems: 'center',
     gap: '16px',
+    justifyContent: 'center',
+    flexDirection: 'column',
   };
 
   const starContainer = {

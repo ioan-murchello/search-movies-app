@@ -3,6 +3,9 @@ import { useState } from 'react';
 const Box = ({ children, title }) => {
   const [isOpen, setisOpen] = useState(true);
 
+  
+
+
   return (
     <div className='box'>
       <button
