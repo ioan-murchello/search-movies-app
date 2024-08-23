@@ -47,7 +47,7 @@ const SelectedMovie = ({ id, resetId, handleAddMovie, watched }) => {
       setIsLoading(true);
       try {
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${key}&i=${id}`
+          `https://www.omdbapi.com/?apikey=${key}&i=${id}`
         );
         if (!res.ok) {
           throw new Error('Unfornetly movie not found...');
